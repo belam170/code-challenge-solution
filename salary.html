@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary calculator</title>
+    <link rel="stylesheet" a href="salary.css">
+</head>
+<body>
+    <div id="a">
+        <div class="b">
+            <h1>Salary generator</h1>
+            <form>
+                <label for="pyee">Payee:</label><br>
+                <input type ="number" id="c" value=""><br>
+                <label for ="NHIF">NHIF Deductions:</label><br>
+                <input type="number" id="d" value=""><br>
+                <label for ="NSSFD">NSSFD Deductions:</label><br>
+                <input type="number" id="e" value=""><br>
+                <label for ="gross">Gross salary:</label><br>
+                <input type="number" id="f" value=""><br>
+                <label for ="net">Net salary:</label><br>
+                <input type="number" id="g" value=""><br>
+            </form>
+            <p>Results</p>
+            <script>
+                // define payee rates
+// Define tax rates and contribution percentages
+const PAYEE_RATE = [0.1,0.25,0.3]; // 10%,25%,30% payee tax
+const NHIF_RATE = 0.25; // 25% NHIF contribution
+const NSSF_RATE = 0.01; // 1% NSSF contribution
+
+// Prompt user for input of basic salary and benefits
+const basicSalary = Number(prompt("Enter your basic salary:"));
+const benefits = Number(prompt("Enter your benefits:"));
+
+// Calculate gross salary by adding basic salary and benefits
+const grossSalary = basicSalary + benefits;
+
+// Calculate payee tax by multiplying gross salary by PAYEE_RATE
+const payee = grossSalary * PAYEE_RATE;
+
+// Calculate NHIF deduction by multiplying gross salary by NHIF_RATE
+const nhifDeduction = grossSalary * NHIF_RATE;
+
+// Calculate NSSF deduction by multiplying gross salary by NSSF_RATE
+const nssfDeduction = grossSalary * NSSF_RATE;
+
+// Calculate net salary by subtracting payee tax, NHIF deduction, and NSSF deduction from gross salary
+const netSalary = grossSalary - payee - nhifDeduction - nssfDeduction;
+
+
+
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>

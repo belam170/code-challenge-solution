@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UTUMISHI ACADEMY GRADING SYSTEM</title>
+    <link rel="stylesheet" a href="grade.css">
+	<script type="text/javascript">
+		//  grading solution is here
+        function funclick() {
+			let gradePoints = document.getElementById("Points").value;
+			if (gradePoints > 79) {
+				alert("Grade: A"); // any number above 78 will return A
+			} else if (gradePoints > 60) {
+				alert("Grade: B");// any number above 60 will return B
+			} else if (gradePoints > 49) {
+				alert("Grade: C");// any number above 49 will return C
+			} else if (gradePoints > 40) {
+				alert("Grade: D");// any number above 40 will return D
+			} else {
+				alert("Grade: E");// any number below 40 will return E
+			}
+		}
+    </script>
+</head>
+<body>
+	<div id="Header">
+		<div class="b">
+			<h1>Welcome to <span>UTUMISHI ACADEMY GRADING SYSTEM</span></h1>
+			<p>Junior grading system</p>
+			<form class="c">
+				<label for="fname">First Name:</label><br>
+				<input type="text" id="fname" name="fname" value="belam"><br>
+				<label for="lname">Lastname:</label><br>
+				<input type="text" id="lname" value="muia"><br>
+				<label for="form">Form:</label><br>
+				<input type="number" id="form" value="2"><br>
+				<label for="Grade meanscore">GradePoints</label> <br>
+				<input type="number" id="Points" value="59"><br>
+			</form>
+			<button id="d" onclick="funclick()">Check Grade</button>
+		</div>
+	</div>
+</body>
+</html>

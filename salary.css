@@ -1,0 +1,9 @@
+.h1{
+    font-size: 275%;
+    font-style: italic;
+    color: red;
+}
+.p{
+    font-style: bold;
+    font-size: 200%;
+}
