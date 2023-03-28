@@ -12,19 +12,22 @@
         <div class="b">
             <h1>Salary generator</h1>
             <form>
-                <label for="pyee">Payee:</label><br>
-                <input type ="number" id="c" value=""><br>
-                <label for ="NHIF">NHIF Deductions:</label><br>
-                <input type="number" id="d" value=""><br>
-                <label for ="NSSFD">NSSFD Deductions:</label><br>
-                <input type="number" id="e" value=""><br>
-                <label for ="gross">Gross salary:</label><br>
-                <input type="number" id="f" value=""><br>
-                <label for ="net">Net salary:</label><br>
-                <input type="number" id="g" value=""><br>
+                <label for="i">Basic Salary:</label>
+    <input type="number" id="i" name="basic_salary">
+    <br>
+    <label for="z">Benefits:</label>
+    <input type="number" id="z" name="benefits">
+    <br><br>
+    <button type="button" onclick="calculateSalary()">Calculate</button>
             </form>
-            <p>Results</p>
-            <script src="salary.js"></script> </script>
+            <h2>Results:</h2>
+  <p>Gross Salary: <span id="f"></span></p>
+  <p>NHIF Deduction: <span id="d"></span></p>
+  <p>NSSF Deduction: <span id="e"></span></p>
+  <p>PAYEE Tax: <span id="c"></span></p>
+  <p>Net Salary: <span id="g"></span></p>
+  
+            <script src="salary.js"></script> 
         </div>
     </div>
     
